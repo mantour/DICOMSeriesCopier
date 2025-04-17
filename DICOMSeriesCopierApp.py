@@ -82,6 +82,7 @@ class DICOMSeriesCopierApp:
         self.progress_bar = ttk.Progressbar(root, mode="determinate")
         self.progress_bar.pack(fill=tk.X, padx=10, pady=(0, 5))
         self.progress_bar.pack_forget()
+
     def load_dicom_root(self):
         folder = filedialog.askdirectory(title="Select DICOM Root Folder")
         if not folder:
@@ -175,6 +176,7 @@ class DICOMSeriesCopierApp:
             if keyword in label.lower():
                 self.series_listbox.insert(tk.END, label)
                 self.filtered_uids.append(uid)
+
     def on_series_select(self, event):
         selection = self.series_listbox.curselection()
         if not selection or selection[0] >= len(self.filtered_uids):
@@ -252,6 +254,7 @@ class DICOMSeriesCopierApp:
             self._do_copy_series(selected_uids, naming_mode.get(), prefix_var.get(), custom_name_var.get())
 
         tk.Button(name_win, text="Start Copy", command=start_copy).pack(pady=10)
+        
     def _do_copy_series(self, selected_uids, naming_mode, prefix, custom_name):
         out_folder = filedialog.askdirectory(
             title="Select Output Folder",
