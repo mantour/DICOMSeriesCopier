@@ -19,6 +19,8 @@ This is a graphical tool built with Python and tkinter that allows medical profe
 ## 📸 Screenshots
 
 (Insert GUI screenshots here)
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/0f8a03e5-a2ce-42b2-82ea-4437923d7d19" />
+
 
 ---
 
@@ -123,8 +125,7 @@ Author: Yen-Ju Chu (e-mail:mantour.tw@gmail.com)
 ---
 
 ## 📸 使用預覽
-
-（請於 GitHub 上補上截圖）
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/0f8a03e5-a2ce-42b2-82ea-4437923d7d19" />
 
 ---
 
