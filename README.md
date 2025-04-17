@@ -1,3 +1,94 @@
+# DICOM Series Copier Tool
+
+This is a graphical tool built with Python and tkinter that allows medical professionals to select specific image series from DICOM folders and copy them based on their descriptions.
+
+---
+
+## 🖥️ Features
+
+- 📂 Lazy scanning of DICOM folders (only scans when a bottom-level folder is selected)
+- 🔎 Supports filtering series by description, date, and folder path
+- 🎞️ Preview center image of series and scroll to navigate
+- 📊 Displays progress bar to prevent UI freezing
+- 🧳 Copy selected series and preserve folder structure
+- ✍️ Three folder naming options: original description, custom name, prefix + description
+- 🚫 Automatically sanitizes illegal characters in folder names
+
+---
+
+## 📸 Screenshots
+
+(Insert GUI screenshots here)
+
+---
+
+## 📦 Installation
+
+### Requirements
+- Python 3.8+
+- Windows / macOS / Linux
+- Recommended: Python virtual environment
+
+### Install dependencies
+```bash
+pip install pydicom pillow
+```
+
+---
+
+## ▶️ How to Run
+```bash
+python DICOMSeriesCopier.py
+```
+
+Steps to use:
+1. Load DICOM folder  
+2. Select bottom-level subfolder  
+3. Choose series to copy  
+4. Select naming mode  
+5. Select output folder and copy
+
+---
+
+## 🚀 Package as Executable
+```bash
+pip install pyinstaller
+pyinstaller --noconsole --onefile DICOMSeriesCopier.py
+```
+The output `.exe` will appear under `dist/`.
+
+---
+
+## 📁 Folder Structure
+```
+<output>/
+└── <original_subfolder>/
+    └── <SeriesName>/
+        ├── image1.dcm
+        ├── image2.dcm
+```
+
+---
+
+## 🛠 TODO
+- [ ] Export image preview as PNG/JPEG
+- [ ] Support drag-and-drop folders
+- [ ] DICOM tag-based filtering (e.g., Modality, StudyDate)
+- [ ] DICOM anonymization
+- [ ] Multi-language UI (EN/ZH)
+
+---
+
+## 🪪 License
+This tool is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+Author: Yen-Ju Chu (e-mail:mantour.tw@gmail.com)
+
+
+
+
 # DICOM Series 複製工具
 
 這是一個基於 Python 與 tkinter 製作的圖形化工具，方便醫療人員從 DICOM 資料夾中選取指定影像 series，並根據影像描述自動建立資料夾進行複製。特別適合需要整理、搬移或篩選特定 series 的使用情境。
